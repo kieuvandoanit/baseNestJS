@@ -1,5 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsEmail, IsNotEmpty, isNotEmpty, IsNumberString, IsObject, IsOptional, IsString } from "class-validator";
+import { Address } from "../users.schemas";
 
 export class CreateUserDto {
     @ApiProperty({
@@ -51,11 +52,11 @@ export class CreateUserDto {
     address: Address;
 }
 
-export interface Address {
-    country: string;
-    province: string;
-    district: string;
-    ward: string;
-    street: string;
-    home_number: string;
-}
+// export interface Address {
+//     country: string;
+//     province: string;
+//     district: string;
+//     ward: string;
+//     street: string;
+//     home_number: string;
+// }

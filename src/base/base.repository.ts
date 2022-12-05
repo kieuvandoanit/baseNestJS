@@ -30,10 +30,6 @@ export class BaseRepository<T> {
         return item?.toObject<T>() ?? null;
     }
 
-    // public async exists(filter: Partial<T>): Promise<boolean> {
-    //     return await this._model.exists(filter);
-    // }
-
     public async create(data: Partial<T>): Promise<T> {
         const item = await this._model.create(data);
         
