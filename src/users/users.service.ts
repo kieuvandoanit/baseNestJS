@@ -26,4 +26,11 @@ export class UsersService extends BaseService<User>{
         });
         return result;
     }
+
+    public async findOne({filter: {username}}): Promise<User> {
+        return await this.userRepository.findOne({
+            filter: { username },
+            selectedFields: [],
+        });
+    }
 }
