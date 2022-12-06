@@ -13,6 +13,7 @@ async function bootstrap() {
     .setDescription('Base project API')
     .setVersion('1.0')
     .addTag('Base API')
+    .addBearerAuth()
     .build();
   
   const document = SwaggerModule.createDocument(app, config);
@@ -20,6 +21,6 @@ async function bootstrap() {
 
 
 
-  await app.listen(3000);
+  await app.listen(5000);
 }
 bootstrap();
